@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.teachvideo.mapper.VlabelMapper">
+	<resultMap id="BaseResultMap" type="com.teachvideo.bean.Vlabel">
+		<id column="vl_id" property="vl_id" jdbcType="INTEGER" />
+		<result column="vl_name" property="vl_name" jdbcType="VARCHAR" />
+		<result column="v_ID" property="v_ID" jdbcType="INTEGER" />
+		<result column="vl_keyword" property="vl_keyword" jdbcType="VARCHAR" />
+		<result column="vl_describe" property="vl_describe" jdbcType="VARCHAR" />
+		<result column="vl_remarks" property="vl_remarks" jdbcType="INTEGER" />
+		<result column="vl_isend" property="vl_isend" jdbcType="VARCHAR" />
+		<result column="vl_img" property="vl_img" jdbcType="VARCHAR" />
+
+
+	</resultMap>
+	<sql id="Base_Column_List">
+		vl_id,vl_name,v_ID,vl_keyword,vl_describe,vl_remarks,
+		vl_isend,vl_img
+	</sql>
+	<select id="getall" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from vlabel
+	</select>
+	<select id="getallpage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from vlabel limit #{currentPage},1
+	</select>
+	<select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from vlabel
+		where vl_id = #{vl_id}
+	</select>
+		<select id="getByremark" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from vlabel
+		where vl_remarks = #{vl_remarks}
+	</select>
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from vlabel
+		where
+		vl_id
+		=
+		#{vl_id,jdbcType=INTEGER}
+	</delete>
+	<insert id="save" parameterType="com.teachvideo.bean.Vlabel">
+		insert into vlabel
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="vl_id != null">
+				vl_id,
+			</if>
+			<if test="vl_name != null">
+				vl_name,
+			</if>
+			<if test="v_ID != null">
+				v_ID,
+			</if>
+			<if test="vl_keyword!= null">
+				vl_keyword,
+			</if>
+			<if test="vl_describe != null">
+				vl_describe,
+			</if>
+			<if test="vl_isend != null">
+				vl_isend,
+			</if>
+			<if test="vl_remarks!=null">
+				vl_remarks,
+			</if>
+			<if test="vl_img!=null">
+				vl_img
+			</if>
+
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="vl_id!= null">
+				#{vl_id,jdbcType=INTEGER},
+			</if>
+			<if test="vl_name!= null">
+				#{vl_name},
+			</if>
+			<if test="v_ID!= null">
+				#{v_ID},
+			</if>
+			<if test="vl_keyword!= null">
+				#{vl_keyword},
+			</if>
+			<if test="vl_describe!= null">
+				#{vl_describe},
+			</if>
+			<if test="vl_isend!= null">
+				#{vl_isend},
+			</if>
+			<if test="vl_remarks!=null">
+				#{vl_remarks},
+			</if>
+			<if test="vl_img!=null">
+				#{vl_img}
+			</if>
+
+		</trim>
+	</insert>
+	<insert id="getsave" parameterType="com.teachvideo.bean.Vlabel"
+		useGeneratedKeys="true" keyProperty="vl_id">
+		insert into vlabel
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="vl_id != null">
+				vl_id,
+			</if>
+			<if test="vl_name != null">
+				vl_name,
+			</if>
+			<if test="v_ID != null">
+				v_ID,
+			</if>
+			<if test="vl_keyword!= null">
+				vl_keyword,
+			</if>
+			<if test="vl_describe != null">
+				vl_describe,
+			</if>
+			<if test="vl_isend != null">
+				vl_isend,
+			</if>
+			<if test="vl_remarks!=null">
+				vl_remarks,
+			</if>
+			<if test="vl_img!=null">
+				vl_img
+			</if>
+
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="vl_id!= null">
+				#{vl_id,jdbcType=INTEGER},
+			</if>
+			<if test="v_ID!= null">
+				#{v_ID},
+			</if>
+			<if test="vl_keyword!= null">
+				#{vl_keyword},
+			</if>
+			<if test="vl_describe!= null">
+				#{vl_describe},
+			</if>
+			<if test="vl_isend!= null">
+				#{vl_isend},
+			</if>
+			<if test="vl_name!= null">
+				#{vl_name},
+			</if>
+			<if test="vl_remarks!=null">
+				#{vl_remarks},
+			</if>
+			<if test="vl_img!=null">
+				#{vl_img}
+			</if>
+		</trim>
+	</insert>
+	<update id="update" parameterType="com.teachvideo.bean.Vlabel">
+		update vlabel
+		<set>
+			<if test="v_ID != null">
+				v_ID = #{v_ID,jdbcType=INTEGER},
+			</if>
+			<if test="vl_keyword != null">
+				vl_keyword = #{vl_keyword},
+			</if>
+			<if test="vl_name != null">
+				vl_name = #{vl_keyword},
+			</if>
+			<if test="vl_describe != null">
+				vl_describe = #{vl_describe},
+			</if>
+			<if test="vl_isend != null">
+				vl_isend = #{vl_isend},
+			</if>
+			<if test="vl_remarks!=null">
+				vl_remarks=#{vl_remarks},
+			</if>
+			<if test="vl_img!=null">
+				vl_img=#{vl_img}
+			</if>
+		</set>
+		where vl_id = #{vl_id,jdbcType=INTEGER}
+	</update>
+</mapper>

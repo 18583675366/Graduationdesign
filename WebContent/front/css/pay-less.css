@@ -1,0 +1,457 @@
+#main {
+	padding-top: 0
+}
+
+button, .pay-btn {
+	font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica,
+		"Helvetica Neue", Tahoma, Arial, sans-serif;
+	color: #fff !important;
+	padding: 10px 60px
+}
+
+button:hover, .pay-btn:hover {
+	cursor: pointer
+}
+
+#pay-banner {
+	height: 120px;
+	position: relative
+}
+
+#banner-bg {
+	width: 100%;
+	height: 120px
+}
+
+#banner-wrap {
+	width: 100%;
+	height: 120px;
+	line-height: 120px;
+	position: absolute;
+	left: 0;
+	top: 0
+}
+
+.pay-container {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.pay-content-wrap {
+	min-height: 650px
+}
+
+.pay-banner-title {
+	color: #fff;
+	font-weight: 700;
+	font-size: 2em
+}
+
+.pay-sub-title {
+	color: #14191e;
+	font-weight: 700;
+	padding-bottom: 10px
+}
+
+#pay-info {
+	margin-top: 50px;
+	margin-bottom: 60px
+}
+
+.pay-table {
+	width: 100%;
+	border-top: 1px solid #d0d6d9
+}
+
+.pay-table thead {
+	background-color: #f6f6f6
+}
+
+.pay-table thead tr {
+	height: 40px
+}
+
+.pay-table thead .p-th-course {
+	padding-left: 20px
+}
+
+.pay-table .t-title-md {
+	text-align: center
+}
+
+.pay-table tbody:before {
+	content: " ";
+	display: block;
+	height: 30px
+}
+
+.pay-table .p-info-course {
+	width: 50%
+}
+
+#p-course-pic {
+	vertical-align: middle;
+	width: 160px;
+	height: 90px
+}
+
+#p-course-name {
+	padding-left: 30px;
+	font-weight: 700;
+	font-size: 18px
+}
+
+#p-course-day {
+	display: block;
+	font-weight: 700;
+	font-size: 18px
+}
+
+#p-course-time {
+	color: #8e9296;
+	font-size: 12px
+}
+
+.p-single-money {
+	color: #f01400;
+	font-weight: 700;
+	font-size: 24px
+}
+
+#pay-type {
+	padding-top: 30px;
+	padding-bottom: 60px;
+	border-top: 1px solid #d0d6d9;
+	border-bottom: 1px solid #d0d6d9;
+	overflow: hidden;
+	position: relative
+}
+
+.pay-list li {
+	float: left;
+	position: relative;
+	width: 220px;
+	height: 90px;
+	border: 2px solid transparent
+}
+
+.pay-list li.selected, .pay-list li:hover {
+	border: 2px solid #f01400;
+	cursor: pointer
+}
+
+.pay-list li.selected:before, .pay-list li:hover:before {
+	content: "";
+	background: url(http://coding.imooc.com/static/module/class/pay/img/pay_s.png) 0 0 no-repeat;
+	height: 20px;
+	width: 20px;
+	display: block;
+	position: absolute;
+	right: -10px;
+	top: -10px
+}
+
+.pay-list li+li {
+	margin-left: 25px
+}
+
+.pay-list .alipay {
+	background: #f6f6f6 url(http://coding.imooc.com/static/module/class/pay/img/pay_s.png) 55px
+		-301px no-repeat
+}
+
+.pay-list .wxpay {
+	background: #f6f6f6 url(http://coding.imooc.com/static/module/class/pay/img/pay_s.png) 48px
+		-422px no-repeat
+}
+
+#pay-summary {
+	float: right
+}
+
+#pay-summary p {
+	padding: 25px 0 40px;
+	text-align: right
+}
+
+#pay-summary p .money-total {
+	color: #f01400;
+	padding-left: 65px
+}
+
+#pay-summary p label {
+	display: inline-block;
+	padding-bottom: 5px
+}
+
+#pay-summary #p-next-btn {
+	background-color: #f01400;
+	margin-left: 30px
+}
+
+#pay-summary #p-next-btn:hover {
+	background-color: #f34333
+}
+
+#pay-summary .money-pay {
+	color: #f01400;
+	font-weight: 700;
+	font-size: 24px;
+	vertical-align: middle
+}
+
+#pay-summary #p-next-btn.disable {
+	background-color: #eee;
+	color: #999 !important;
+	cursor: default
+}
+
+.pay-info-wrap {
+	height: 500px;
+	width: 600px;
+	margin: 100px auto 0;
+	text-align: center
+}
+
+.pay-info-wrap span {
+	display: inline-block
+}
+
+.p-result-info {
+	font-size: 24px;
+	color: #14191e
+}
+
+.p-logo {
+	margin-bottom: 30px;
+	height: 101px;
+	width: 101px
+}
+
+.p-success-logo {
+	background: url(http://coding.imooc.com/static/module/class/pay/img/pay_s.png) 0 -30px
+		no-repeat
+}
+
+.p-goto {
+	color: #787d82
+}
+
+#countdowm {
+	color: #f01400
+}
+
+#begin-learn {
+	display: inline-block;
+	margin-top: 35px;
+	background-color: #39b94e
+}
+
+#begin-learn:hover {
+	background-color: #61c771
+}
+
+.p-fail-logo {
+	background: url(http://coding.imooc.com/static/module/class/pay/img/pay_s.png) 0 -141px
+		no-repeat
+}
+
+.pay-fail-detail {
+	border: 1px solid #d0d6d9;
+	padding: 25px 35px;
+	margin-top: 40px;
+	font-size: 12px;
+	text-align: left
+}
+
+.pay-fail-detail span {
+	color: #787d82
+}
+
+.pay-fail-detail h5 {
+	font-weight: 700;
+	color: #14191e
+}
+
+.pay-fail-detail .sec-title {
+	margin-top: 15px
+}
+
+.pay-fail-detail .back-pay {
+	color: #f01400;
+	font-weight: 700
+}
+
+.pay-fail-detail .back-pay:hover {
+	text-decoration: underline
+}
+
+#modal-wxpay {
+	display: none;
+	width: 380px;
+	background-color: #fff;
+	padding: 10px 10px 0
+}
+
+#modal-wxpay:after {
+	content: '';
+	display: block;
+	width: 400px;
+	height: 10px;
+	background: url(http://coding.imooc.com/static/module/common/img/pay-gear.png) repeat-x;
+	position: absolute;
+	left: 0;
+	bottom: -10px
+}
+
+#modal-wxpay .modal-header {
+	overflow: hidden;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #d0d6d9
+}
+
+#modal-wxpay .modal-header h3 {
+	color: #14191e;
+	float: left;
+	font-weight: 700
+}
+
+#modal-wxpay .modal-header a {
+	color: #b4bbbf;
+	font-size: 24px;
+	float: right;
+	line-height: 30px
+}
+
+#modal-wxpay .wxcode {
+	width: 200px;
+	text-align: center;
+	margin: 30px auto 25px
+}
+
+#modal-wxpay .wxcode .qrcode-img {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	background: url(http://coding.imooc.com/static/module/common/img/loading.gif) no-repeat
+		center center
+}
+
+#modal-wxpay .wxcode .wx-pay-info {
+	display: inline-block;
+	color: #787d82;
+	padding: 5px 0
+}
+
+#modal-wxpay .wxcode .wx-pay-price {
+	color: #f01400;
+	font-size: 18px;
+	font-weight: 700
+}
+
+#modal-payconfirm {
+	display: none;
+	width: 380px
+}
+
+#modal-payconfirm .modal-body {
+	padding: 10px 10px 30px;
+	background: #fff;
+	text-align: center;
+	z-index: 2
+}
+
+#modal-payconfirm .modal-body h3 {
+	font-weight: 700;
+	font-size: 18px;
+	color: #14191e;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+#modal-payconfirm .modal-body span {
+	display: inline-block
+}
+
+#modal-payconfirm .modal-body span+span {
+	padding-top: 10px
+}
+
+#modal-payconfirm .modal-footer {
+	height: 80px;
+	background-color: #edf1f2;
+	position: relative
+}
+
+#modal-payconfirm .modal-footer:before {
+	content: '';
+	background: url(http://coding.imooc.com/static/module/common/img/pay-gear.png) repeat-x;
+	display: block;
+	height: 10px;
+	width: 380px;
+	position: absolute;
+	z-index: 2
+}
+
+#modal-payconfirm .modal-footer:after {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 380px;
+	top: -2px;
+	box-shadow: 0 8px 8px 1px rgba(0, 0, 0, .2)
+}
+
+#modal-payconfirm .modal-footer .footer-wrap {
+	overflow: hidden;
+	width: 320px;
+	margin: 0 auto;
+	padding-top: 20px
+}
+
+#reset-pay-type, #pay-complete {
+	padding-left: 40px;
+	padding-right: 40px
+}
+
+#reset-pay-type {
+	color: #787d82 !important;
+	background-color: transparent;
+	border: 1px solid #b4bbbf;
+	float: left;
+	line-height: 1.4
+}
+
+#reset-pay-type:hover {
+	border: 1px solid #7e888c;
+	color: #14191e !important
+}
+
+#pay-complete {
+	float: right;
+	background-color: #f01400
+}
+
+#pay-complete:hover {
+	background-color: #f34333
+}
+
+#pay-tips {
+	display: none;
+	padding-top: 20px;
+	color: #f01400;
+	font-weight: 700
+}
+
+.mask {
+	position: absolute;
+	background: #fff;
+	opacity: .5;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 184px;
+	z-index: 9
+}

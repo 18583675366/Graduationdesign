@@ -1,0 +1,36 @@
+.carousel-control.left{
+	    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+        position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 80px;
+    height: 100px;
+    overflow: hidden;
+    opacity: 1;
+    text-indent: -90em;
+    background-image: url(http://static.mukewang.com/static/img/index/banner_sprite.png?1);
+    background-repeat: no-repeat;
+    transition: transform .6s,opacity 1s;
+    left: 0;
+    background-position: 0 -41px
+}
+.carousel-control.right{
+	    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+        position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 80px;
+    height: 100px;
+    overflow: hidden;
+    opacity: 1;
+    text-indent: -90em;
+    background-image: url(http://static.mukewang.com/static/img/index/banner_sprite.png?1);
+    background-repeat: no-repeat;
+    transition: transform .6s,opacity 1s;
+    right: 0;
+    background-position: 0 -142px
+}

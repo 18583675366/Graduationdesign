@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.teachvideo.mapper.OrderMapper">
+	<resultMap id="BaseResultMap" type="com.teachvideo.bean.Order">
+		<id column="or_id" property="or_id" jdbcType="INTEGER" />
+		<result column="or_time" property="or_time" jdbcType="TIMESTAMP" />
+		<result column="or_isend" property="or_isend" jdbcType="INTEGER" />
+		<result column="or_entime" property="or_entime" jdbcType="TIMESTAMP" />
+		<result column="u_id" property="u_id" jdbcType="INTEGER" />
+		<result column="or_price" property="or_price" jdbcType="INTEGER" />
+		<result column="or_content" property="or_content" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		or_id,or_time,or_isend,or_entime,u_id,
+		or_content,or_price
+	</sql>
+	<select id="getall" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from orders
+	</select>
+	<select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from orders
+		where or_id = #{or_id}
+	</select>
+	<select id="getbyuid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from orders
+		where u_id = #{u_id}
+	</select>
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from orders
+		where
+		or_id
+		=
+		#{or_id,jdbcType=INTEGER}
+	</delete>
+	<insert id="save" parameterType="com.teachvideo.bean.Order">
+		insert into orders
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="or_id != null">
+				or_id,
+			</if>
+			<if test="or_time != null">
+				or_time,
+			</if>
+			<if test="or_isend != null">
+				or_isend,
+			</if>
+			<if test="or_entime!= null">
+				or_entime,
+			</if>
+			<if test="u_id != null">
+				u_id,
+			</if>
+			<if test="or_content != null">
+				or_content,
+			</if>
+			<if test="or_price != null">
+				or_price
+			</if>
+
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="or_id!= null">
+				#{or_id,jdbcType=INTEGER},
+			</if>
+			<if test="or_time!= null">
+				#{or_time},
+			</if>
+			<if test="or_isend!= null">
+				#{or_isend},
+			</if>
+			<if test="or_entime!= null">
+				#{or_entime},
+			</if>
+			<if test="u_id!= null">
+				#{u_id,jdbcType=INTEGER},
+			</if>
+			<if test="or_content!= null">
+				#{or_content},
+			</if>
+			<if test="or_price != null">
+				#{or_price}
+			</if>
+
+		</trim>
+	</insert>
+	<update id="update" parameterType="com.teachvideo.bean.Order">
+		update orders
+		<set>
+			<if test="or_isend != null">
+				or_isend = #{or_isend,jdbcType=INTEGER},
+			</if>
+			<if test="or_entime != null">
+				or_entime = #{or_entime},
+			</if>
+			<if test="or_time != null">
+				or_time = #{or_entime},
+			</if>
+			<if test="u_id != null">
+				u_id = #{u_id},
+			</if>
+			<if test="or_content != null">
+				or_content = #{or_content},
+			</if>
+			<if test="or_price!= null">
+				or_price=#{or_price}
+			</if>
+		</set>
+		where or_id = #{or_id,jdbcType=INTEGER}
+	</update>
+</mapper>

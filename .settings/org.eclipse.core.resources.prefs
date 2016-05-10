@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/pages/front/index.jsp=UTF-8
+<<<<<<< HEAD
+encoding/<project>=UTF-8
+=======
+encoding//WebContent/WEB-INF/pages/front/login.jsp=UTF-8
+encoding//WebContent/WEB-INF/pages/front/paymoney.jsp=UTF-8
+encoding//WebContent/WEB-INF/pages/front/register.jsp=UTF-8
+encoding//WebContent/WEB-INF/pages/front/vip.jsp=UTF-8
+>>>>>>> origin/master
